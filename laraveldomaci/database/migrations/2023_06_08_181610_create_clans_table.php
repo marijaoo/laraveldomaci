@@ -12,11 +12,12 @@ return new class extends Migration {
     {
         Schema::create('clans', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+
             $table->string('Ime');
             $table->string('Prezime');
             $table->string('ClanskaKarta');
             $table->date('DatumIsteka');
+            $table->timestamps();
         });
     }
 

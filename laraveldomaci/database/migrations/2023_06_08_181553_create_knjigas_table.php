@@ -12,11 +12,12 @@ return new class extends Migration {
     {
         Schema::create('knjigas', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+
             $table->string('Naziv');
             $table->string('Zanr');
             $table->string('Opis');
             $table->string('Pisac');
+            $table->timestamps();
         });
     }
 

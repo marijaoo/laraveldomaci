@@ -12,12 +12,12 @@ return new class extends Migration {
     {
         Schema::create('pozajmicas', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-            $table->foreignId('ClanId');
-            $table->foreignId('KnjigaId');
+
+            $table->foreignId('clan_id');
+            $table->foreignId('knjiga_id');
             $table->string('BrojDanaPozajmice');
             $table->date('DatumVracanja');
-
+            $table->timestamps();
         });
     }
 
