@@ -17,7 +17,10 @@ class ClanFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'Ime' => $this->faker->name(),
+            'Prezime' => $this->faker->lastName(),
+            'ClanskaKarta' => $this->faker->numerify('#########'),
+            'DatumIsteka' => $this->faker->dateTimeThisYear()
         ];
     }
 }

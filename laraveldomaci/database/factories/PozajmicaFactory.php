@@ -17,7 +17,11 @@ class PozajmicaFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'ClanId' => $this->faker->randomDigitNot(0),
+            'KnjigaId' => $this->faker->randomDigitNot(0),
+            'BrojDanaPozajmice' => $this->faker->randomNumber($nbDigits = 2),
+            'DatumVracanja' => $this->faker->dateTimeThisYear()
+
         ];
     }
 }

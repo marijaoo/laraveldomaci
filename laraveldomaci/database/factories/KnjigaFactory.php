@@ -17,7 +17,10 @@ class KnjigaFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'Naziv' => $this->faker->sentence($nbWords = 1, $variableNbWords = true),
+            'Zanr' => $this->faker->sentence($nbWords = 1),
+            'Opis' => $this->faker->paragraph($nbSentences = 3),
+            'Pisac' => $this->faker->name(),
         ];
     }
 }

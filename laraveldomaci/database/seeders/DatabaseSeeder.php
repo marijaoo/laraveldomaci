@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Knjiga;
+use App\Models\Pozajmica;
+use App\Models\Clan;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -12,11 +15,24 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        Clan::truncate();
+        Knjiga::truncate();
+        Pozajmica::truncate();
+
+        Clan::factory()
+            ->count(15)
+            ->create();
+
+        Knjiga::factory()
+            ->count(15)
+            ->create();
+
+        Pozajmica::factory()
+            ->count(15)
+            ->create();
+
+
+
     }
 }
