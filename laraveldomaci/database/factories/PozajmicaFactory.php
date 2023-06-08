@@ -19,7 +19,7 @@ class PozajmicaFactory extends Factory
         return [
             'ClanId' => $this->faker->randomDigitNot(0),
             'KnjigaId' => $this->faker->randomDigitNot(0),
-            'BrojDanaPozajmice' => $this->faker->randomNumber($nbDigits = 2),
+            'DaniPozajmljivanja' => $this->faker->randomNumber($nbDigits = 2),
             'DatumVracanja' => $this->faker->dateTimeThisYear()
 
         ];
